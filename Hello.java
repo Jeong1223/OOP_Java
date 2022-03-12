@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Hello {
     public static void main(String[] args) {
 
@@ -20,6 +22,7 @@ public class Hello {
         //Find the number of occurrences of a character in a String?
         int count = 0;
         char search = 'h';
+        // int length = str.length();
 
         for (int i = 0; i < length; i++) {
             if (str.charAt(i) == search) {
@@ -37,12 +40,11 @@ public class Hello {
             char[] anagram2 = reverse.toCharArray();
             Arrays.sort(anagram1);
             Arrays.sort(anagram2);
-            anagramstat = Arrays.equals(anagram1, anagram2);
+            anagrmstat = Arrays.equals(anagram1, anagram2);
         }
-        if (anagramstat == true) {
-            System.out.println(" anagrams string");
+        if (anagrmstat == true) {
+            System.out.println(str + " and " + reverse + " anagrams string");
         } else {
-            System.out.println(" not anagrams string");
+            System.out.println(str + " and " + reverse + " not anagrams string");
         }
     }
-}
